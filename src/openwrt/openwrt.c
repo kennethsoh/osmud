@@ -235,7 +235,7 @@ int verifyCmsSignature(char *mudFileLocation, char *mudSigFileLocation)
 	char execBuf[BUFSIZE];
 	int retval, sigStatus;
 
-	snprintf(execBuf, BUFSIZE, "openssl cms -verify -in %s -inform DER -content %s -purpose any", mudSigFileLocation, mudFileLocation);
+	snprintf(execBuf, BUFSIZE, "openssl cms -verify -in %s -inform DER -content %s -purpose any -binary -out /dev/null", mudSigFileLocation, mudFileLocation);
 	execBuf[BUFSIZE-1] = '\0';
 
 	logOmsGeneralMessage(OMS_DEBUG, OMS_SUBSYS_GENERAL, execBuf);

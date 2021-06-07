@@ -20,7 +20,7 @@ NAME=osmud
 PROG=/usr/bin/osmud
 
 DNS_FILE_NAME_WITH_PATH="/var/state/osmud/dnswhitelist"
-MUD_FILE_DIRECTORY="/var/state/osmud/mudfiles"
+MUD_FILE_DIRECTORY="/var/state/osmud/mudfiles/"
 BASECONFIGFILE="/etc/osmud.conf"
 DHCP_EVENT_FILE="/var/log/dhcpmasq.txt"
 PID_FILE="/var/run/osmud.pid"
